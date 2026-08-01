@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://sift.com/legal-and-compliance/trust-and-safety-security/
+standards:
+- id: soc2-type-ii
+  conforms: true
+  evidence: >-
+    "Sift works with an independent third-party auditor to assess certain Trust Service
+    Criteria (TSC) for its annual SOC 2 Type II report."
+- id: iso-27001
+  conforms: true
+  evidence: >-
+    "Auditing controls for certification under ISO 27001 for Sift products and services."
+- id: penetration-testing
+  conforms: true
+  evidence: >-
+    "We engage independent third parties to conduct ... Penetration tests."
+- id: oauth2
+  conforms: false
+  evidence: API authenticates with per-account API keys, not OAuth2.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use a numeric Sift status-code envelope, not application/problem+json.

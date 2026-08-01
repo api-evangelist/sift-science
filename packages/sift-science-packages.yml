@@ -1,0 +1,69 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  Public package registries (PyPI, RubyGems, Packagist, Maven Central, NuGet) and the
+  Sift GitHub organization https://github.com/SiftScience
+packages:
+- language: python
+  registry: pypi
+  name: Sift
+  version: 6.0.0
+  url: https://pypi.org/project/Sift/
+  install: pip install Sift
+  repository: https://github.com/SiftScience/sift-python
+  official: true
+- language: ruby
+  registry: rubygems
+  name: sift
+  version: 4.6.0
+  url: https://rubygems.org/gems/sift
+  install: gem install sift
+  repository: https://github.com/SiftScience/sift-ruby
+  official: true
+- language: php
+  registry: packagist
+  name: siftscience/sift-php
+  url: https://packagist.org/packages/siftscience/sift-php
+  install: composer require siftscience/sift-php
+  repository: https://github.com/SiftScience/sift-php
+  official: true
+- language: java
+  registry: maven
+  name: com.siftscience:sift-java
+  version: 3.20.0
+  url: https://central.sonatype.com/artifact/com.siftscience/sift-java
+  install: implementation("com.siftscience:sift-java:3.20.0")
+  repository: https://github.com/SiftScience/sift-java
+  official: true
+- language: dotnet
+  registry: nuget
+  name: Sift
+  url: https://www.nuget.org/packages/Sift
+  install: dotnet add package Sift
+  repository: https://github.com/SiftScience/sift-dotnet
+  official: true
+  note: Beta client.
+- language: swift-objc
+  registry: github
+  name: sift-ios
+  url: https://github.com/SiftScience/sift-ios
+  install: pod 'Sift'
+  repository: https://github.com/SiftScience/sift-ios
+  official: true
+  note: iOS device-fingerprinting SDK (CocoaPods).
+- language: java-android
+  registry: github
+  name: sift-android
+  url: https://github.com/SiftScience/sift-android
+  install: implementation 'com.siftscience:sift-android:<version>'
+  repository: https://github.com/SiftScience/sift-android
+  official: true
+  note: Android device-fingerprinting SDK.
+- language: typescript
+  registry: github
+  name: sift-react-native
+  url: https://github.com/SiftScience/sift-react-native
+  install: npm install sift-react-native
+  repository: https://github.com/SiftScience/sift-react-native
+  official: true
+  note: React Native wrapper for the Sift iOS and Android SDKs.

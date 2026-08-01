@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.sift.com/docs/curl/apis-overview
+modes:
+- name: Sandbox
+  description: >-
+    Sift accounts issue a separate Sandbox API key from the Sift Console. Sandbox traffic
+    is isolated from production models and data, letting integrators send test Events,
+    request test Scores, and exercise Decisions/Workflows without affecting the live account.
+- name: Production
+  description: >-
+    The Production API key drives live scoring against the customer's account and the Sift
+    global network.
+key_separation:
+  detail: >-
+    Sandbox and Production are distinguished by which API key is used; both target the same
+    api.sift.com host and path-versioned endpoints. Keys are managed under the account's
+    API Keys settings in the Sift Console.
+notes: >-
+  Sift does not publish fixed "magic" test identifiers (test card numbers / test users) —
+  the sandbox is exercised with your own synthetic Events under the Sandbox API key.

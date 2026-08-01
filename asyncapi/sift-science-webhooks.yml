@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.sift.com/docs/curl/decisions-api/decision-webhooks/overview
+type: Webhooks
+spec_type: none
+summary: >-
+  Sift sends Decision webhooks: when a Decision is applied to an entity (user, order, content,
+  or session) inside the Sift Console or by a Sift Workflow, Sift POSTs a webhook to your
+  configured endpoint so your system can update its own record. Decisions applied by you via
+  the Apply Decisions API do NOT trigger a webhook (you already hold that record).
+events:
+- name: decision.applied
+  trigger: >-
+    A Decision made within the Sift Console or produced by a Sift Workflow on a user, order,
+    content, or session entity.
+  delivery: HTTP POST to a customer-configured webhook URL.
+  payload_includes:
+  - entity (user / order / content / session)
+  - decision_id
+  - time
+notes: >-
+  Webhooks are configured per account in the Sift Console. The latest Decision for an entity
+  can also be pulled via the Decision Status API. No AsyncAPI document is published.

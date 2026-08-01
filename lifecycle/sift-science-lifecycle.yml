@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.sift.com/docs/curl/apis-overview
+versioning:
+  scheme: uri-path
+  current: v205
+  detail: >-
+    Sift pins the API version in the URL path (https://api.sift.com/v205/...). Prior
+    versions (e.g. v204) remain reachable; the Decisions API is served under /v3/.
+  docs: https://developers.sift.com/docs/curl/apis-overview
+status_page: https://status.sift.com
+release_notes: https://sift.com/platform/new-releases/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: >-
+    No formal public deprecation policy or RFC 8594 Sunset/Deprecation header support was
+    found; older path-versioned APIs are retained rather than sunset on a published schedule.

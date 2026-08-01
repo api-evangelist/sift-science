@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.sift.com/docs/curl/apis-overview
+authentication:
+  style: api-key
+  detail: >-
+    API key in the JSON body (`api_key`) for Events/Score/Labels; HTTP Basic (API key as
+    username) for Decisions/Workflow/Verification. See authentication/sift-science-authentication.yml.
+versioning:
+  scheme: uri-path
+  current: v205
+  detail: >-
+    The API version is pinned in the URL path (e.g. https://api.sift.com/v205/events). Older
+    versions such as v204 remain available; the Decisions API uses a separate /v3/ path.
+  see: lifecycle/sift-science-lifecycle.yml
+idempotency:
+  supported: false
+  detail: >-
+    Sift does not document an idempotency-key header. Events are additive and de-duplicated
+    server-side by their identifiers; Decisions are immutable once applied (a subsequent
+    Decision represents an update rather than a mutation).
+pagination:
+  style: cursor
+  detail: >-
+    List endpoints (e.g. GET Decisions) return a paginated collection; results are traversed
+    with `from`/`limit` parameters and next-page links.
+error_envelope:
+  style: sift-status-code
+  detail: >-
+    Numeric `status` (0 = OK), `error_message`, `request`, `time`; optional `warnings`.
+  see: errors/sift-science-error-codes.yml
+scoring_modes:
+  detail: >-
+    Scores can be returned synchronously on an Events call (`return_score=true` /
+    `return_workflow_status=true`) or fetched asynchronously via the Score API. Anonymous
+    events (no $user_id) cannot be scored synchronously.
+data_format:
+  request: application/json
+  transport: HTTPS
+rate_limits:
+  signal: >-
+    Exceeding request limits returns Sift `status: 60` (Rate limited).

@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.sift.com/docs/curl/apis-overview
+families:
+- name: JavaScript Snippet
+  kind: client-side-script
+  description: >-
+    Sift's browser JavaScript snippet collects device, browser, and behavioral signals
+    from web sessions and ships them to Sift keyed by account/user/session. It is embedded
+    on pages the customer wants Sift to observe and complements server-side Events.
+  loader: https://cdn.sift.com/s.js
+- name: Mobile Device SDKs
+  kind: embedded-mobile-sdk
+  description: >-
+    Native device-fingerprinting SDKs that collect the equivalent mobile signals from apps.
+  packages:
+  - iOS (sift-ios / CocoaPods 'Sift')
+  - Android (sift-android)
+  - React Native (sift-react-native)
+  see: packages/sift-science-packages.yml
+notes: >-
+  These are client-side data-collection surfaces (distinct from the server-side REST SDKs).

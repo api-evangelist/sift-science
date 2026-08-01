@@ -1,0 +1,48 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.sift.com/docs/curl/apis-overview/error-codes
+format: sift-status-code
+envelope:
+  description: >-
+    Sift API responses carry a numeric `status` field (0 = success), a human-readable
+    `error_message`, an echo of the `request`, and the server `time`. A non-zero `status`
+    indicates an API-level error even when the HTTP status is 200. Unexpected server
+    problems surface as HTTP 500.
+  fields:
+  - status
+  - error_message
+  - request
+  - time
+  warnings:
+    description: >-
+      Non-fatal validation warnings can be requested by adding `&fields=warnings`; they
+      are returned under a `warnings` object with `count` and `items[].message`.
+codes:
+- {status: -4, message: Service currently unavailable}
+- {status: -3, message: Server-side timeout processing request}
+- {status: -2, message: Unexpected server-side error}
+- {status: -1, message: Unexpected server-side error}
+- {status: 0, message: Success}
+- {status: 51, message: Invalid API key}
+- {status: 52, message: Invalid characters in field name}
+- {status: 53, message: Invalid characters in field value}
+- {status: 55, message: Missing required field}
+- {status: 56, message: Invalid JSON in request}
+- {status: 57, message: Invalid HTTP body}
+- {status: 58, message: Required parameter not specified}
+- {status: 60, message: Rate limited}
+- {status: 61, message: Account disabled}
+- {status: 62, message: Product undecided}
+- {status: 63, message: Invalid IP address}
+- {status: 100, message: Required JSON fields not specified}
+- {status: 104, message: Invalid API version}
+- {status: 105, message: Not a valid reserved field}
+- {status: 109, message: Invalid parameter value}
+- {status: 114, message: Invalid event type}
+- {status: 116, message: Event cannot be processed due to legal restrictions}
+- {status: 117, message: List exceeds maximum size}
+- {status: 118, message: Too many properties}
+- {status: 119, message: Wrong multiple fields format}
+- {status: 120, message: Content type not supported}
+- {status: 121, message: Not supported with XML content type}
+- {status: 125, message: Only one property should be set}

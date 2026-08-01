@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.sift.com/docs/curl/apis-overview
+docs: https://developers.sift.com/docs/curl/apis-overview
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - body
+  - basic-auth-username
+  oauth2_flows: []
+  notes: >-
+    Sift authenticates every REST call with a per-account API key. For the Events, Score
+    and Labels APIs the API key is passed in the JSON request body as `api_key`. For the
+    Decisions, Workflow, Verification and other REST APIs the API key is supplied via HTTP
+    Basic authentication (the key is the Basic-auth username, password left blank). Many
+    endpoints additionally require the numeric `account_id`. Separate Sandbox and
+    Production API keys are issued per account from the Sift Console.
+schemes:
+- name: apiKeyBody
+  type: apiKey
+  in: body
+  parameter: api_key
+  applies_to:
+  - Events API
+  - Score API
+  - Labels API
+  sources:
+  - https://github.com/SiftScience/sift-python
+- name: apiKeyBasic
+  type: http
+  scheme: basic
+  description: >-
+    HTTP Basic authentication with the API key as the username and an empty password.
+  applies_to:
+  - Decisions API
+  - Workflow API
+  - Verification API
+  - PSP Merchant API
+  sources:
+  - https://developers.sift.com/docs/curl/apis-overview

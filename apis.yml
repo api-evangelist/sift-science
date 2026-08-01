@@ -1,8 +1,20 @@
 aid: sift-science
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v1
 name: Sift Science
-description: 'Sift Science is a company surfaced as a portfolio company of initialized-capital and added
-  to the API Evangelist network as a stub for enrichment. Sector: enterprise-saas. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Sift (formerly Sift Science) is a Digital Trust & Safety platform that uses machine
+  learning to help online businesses stop payment fraud, account takeover, fake-account
+  creation, and content abuse in real time. Developers integrate Sift through modern
+  REST APIs (Events, Score, Labels, Decisions, Workflows, and Verification), a client-side
+  JavaScript snippet, and mobile SDKs for iOS and Android. The platform scores users and
+  transactions against a global network of over one trillion annual events, returns risk
+  scores synchronously or asynchronously, and lets teams automate business actions via
+  Decisions and Workflows. Sift is used by 700+ global brands including Hertz, Yelp, and
+  Poshmark.
 url: https://raw.githubusercontent.com/api-evangelist/sift-science/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,18 +22,109 @@ x-backed-by:
 - initialized-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://sift.com/wp-content/uploads/2026/07/Digital-Fraud-Prevention-Risk-Based-Authentication-Sift.png
 tags:
 - Company
 - Enterprise Saas
-apis: []
+- Fraud Detection
+- Fraud Prevention
+- Machine Learning
+- Risk Scoring
+- Payments
+- Identity
+- Security
+- Digital Trust And Safety
+apis:
+- name: Sift API
+  description: >-
+    Sift's REST API for Digital Trust & Safety — send behavioral and transaction Events,
+    request risk Scores, apply Decisions and Labels, run Workflows, and verify users. Data
+    is sent as JSON over HTTPS and authenticated with an API key.
+  humanURL: https://developers.sift.com/docs/curl/apis-overview
+  baseURL: https://api.sift.com/v205
+  properties:
+  - type: Documentation
+    url: https://developers.sift.com/docs/curl/apis-overview
+  - type: APIReference
+    url: https://developers.sift.com/docs/curl/apis-overview
+  - type: Authentication
+    url: authentication/sift-science-authentication.yml
+  - type: ErrorCatalog
+    url: errors/sift-science-error-codes.yml
+  - type: Conventions
+    url: conventions/sift-science-conventions.yml
+  - type: Webhooks
+    url: asyncapi/sift-science-webhooks.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/sift-science-domain-security.yml
 - type: Website
-  url: http://siftscience.com
+  url: https://sift.com
+- type: DeveloperPortal
+  url: https://developers.sift.com/
+- type: Documentation
+  url: https://developers.sift.com/docs/curl/apis-overview
+- type: APIReference
+  url: https://developers.sift.com/docs/curl/apis-overview
+- type: GettingStarted
+  url: https://sift.com/developer-overview/
+- type: Support
+  url: https://sift.com/community
+- type: Blog
+  url: https://sift.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/SiftScience
+- type: SignUp
+  url: https://console.sift.com
+- type: TermsOfService
+  url: https://sift.com/legal-and-compliance/tos/
+- type: PrivacyPolicy
+  url: https://sift.com/legal-and-compliance/service-privacy-notice/
+- type: StatusPage
+  url: https://status.sift.com
+- type: ChangeLog
+  url: changelog/sift-science-changelog.yml
+- type: Packages
+  url: packages/sift-science-packages.yml
+- type: SDKs
+  url: packages/sift-science-packages.yml
+- type: Authentication
+  url: authentication/sift-science-authentication.yml
+- type: Conventions
+  url: conventions/sift-science-conventions.yml
+- type: Lifecycle
+  url: lifecycle/sift-science-lifecycle.yml
+- type: Conformance
+  url: conformance/sift-science-conformance.yml
+- type: Compliance
+  url: https://sift.com/legal-and-compliance/trust-and-safety-security/
+- type: TrustCenter
+  url: https://sift.com/legal-and-compliance/trust-and-safety-security/
+- type: LLMsTxt
+  url: llms/sift-science-llms.txt
+- type: Sandbox
+  url: sandbox/sift-science-sandbox.yml
+- type: Components
+  url: components/sift-science-components.yml
+- type: Webhooks
+  url: asyncapi/sift-science-webhooks.yml

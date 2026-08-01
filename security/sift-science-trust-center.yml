@@ -1,0 +1,15 @@
+generated: '2026-07-21'
+method: searched
+probe: false
+url: https://sift.com/legal-and-compliance/trust-and-safety-security/
+certifications:
+- SOC 2 Type II
+- ISO 27001
+practices:
+- Role-based access controls following least privilege, with regular access reviews.
+- Security events and audit logs forwarded to a central SIEM for monitoring.
+- Routine vulnerability scans and independent third-party penetration tests.
+- Systems housed across multiple availability zones with business-continuity/DR plans.
+evidence:
+- source: https://sift.com/legal-and-compliance/trust-and-safety-security/
+  keywords: [soc 2 type ii, iso 27001, penetration tests, certifications and audits]
