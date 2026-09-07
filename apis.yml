@@ -152,3 +152,5 @@ common:
   url: components/sift-science-components.yml
 - type: Webhooks
   url: asyncapi/sift-science-webhooks.yml
+x-parent: sift
+x-relationship: product
